@@ -1,0 +1,44 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body,
+html {
+    height: 100%;
+    transition: opacity 0.5s ease; /* Set transition for opacity change */
+    opacity: 1; /* Initially fully visible */
+    background-color: black;
+}
+
+.bg {
+    background-image: url("black_bg.jpg");
+    position: relative;
+    height: 100%;
+    width: 100%;;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.logo {
+    position: absolute;
+    top: 20px; /* You can adjust this value to move it down a bit from the top */
+    left: 50%;
+    transform: translate(-50% , 250%);
+    width: auto; /* Set your preferred logo size */
+    height: 100px;
+    z-index: 100;
+    background: transparent url("img/play-button.png") no-repeat center;
+    background-size: contain;
+}
+
+.content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 1000%);
+    color: black;
+    text-align: center;
+    font-size: 24px;
+}
