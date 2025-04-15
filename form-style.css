@@ -1,0 +1,195 @@
+    /* Reset and base styles */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+        background-color: #151419;
+        /* dark void */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        padding: 40px 0;
+        /* Add padding to ensure space at top and bottom */
+    }
+
+    /* Form container */
+    .form-container {
+        background: rgba(27, 27, 30, 0.9);
+        /* gluon grey with glass effect */
+        border: 1px solid #262626;
+        /* slate grey */
+        border-radius: 16px;
+        padding: 40px;
+        width: 100%;
+        max-width: 500px;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+        backdrop-filter: blur(6px);
+        animation: fadeIn 1.5s ease;
+        margin: 20px 0;
+        /* Add margin to ensure space at top and bottom */
+    }
+
+    .form-container h2 {
+        color: #FBFBFB;
+        /* snow */
+        text-align: center;
+        margin-bottom: 24px;
+        letter-spacing: 1px;
+    }
+
+    /* Floating label form group */
+    .form-group {
+        position: relative;
+        margin-bottom: 24px;
+    }
+
+    /* Adjust height only for input fields, not for textareas */
+    .form-group:has(input) {
+        height: 56px;
+    }
+
+    input,
+    textarea {
+        width: 100%;
+        padding: 16px 12px 12px;
+        background: transparent;
+        border: 2px solid #878787;
+        border-radius: 8px;
+        color: #FBFBFB;
+        font-size: 16px;
+        transition: border 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    input:focus,
+    textarea:focus {
+        outline: none;
+        border-color: #F56E0F;
+        /* liquid lava */
+        box-shadow: 0 0 8px #F56E0F;
+    }
+
+    /* Floating label */
+    label {
+        position: absolute;
+        top: 16px;
+        left: 12px;
+        background-color: #1B1B1E;
+        padding: 0 6px;
+        color: #878787;
+        pointer-events: none;
+        transition: 0.2s ease all;
+    }
+
+    h3.section-title {
+        color: #F56E0F;
+        margin: 32px 0 12px;
+        font-size: 18px;
+        border-bottom: 1px solid #262626;
+        padding-bottom: 4px;
+    }
+
+    input:focus+label,
+    input:not(:placeholder-shown)+label,
+    textarea:focus+label,
+    textarea:not(:placeholder-shown)+label {
+        top: -10px;
+        font-size: 12px;
+        color: #F56E0F;
+    }
+
+    /* Submit button */
+    button {
+        width: 100%;
+        padding: 12px;
+        background: linear-gradient(135deg, #F56E0F, #FBFBFB);
+        border: none;
+        border-radius: 8px;
+        color: #151419;
+        font-weight: bold;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background 0.3s ease, transform 0.2s ease;
+        margin-top: 20px;
+    }
+
+    button:hover {
+        background: linear-gradient(135deg, #FBFBFB, #F56E0F);
+        transform: scale(1.03);
+    }
+
+    /* Add button styles */
+    .add-button {
+        background: transparent;
+        border: 2px solid #F56E0F;
+        color: #F56E0F;
+        width: auto;
+        padding: 8px 16px;
+        font-size: 14px;
+        margin-bottom: 20px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+
+    .add-button:hover {
+        background: rgba(245, 110, 15, 0.1);
+        transform: scale(1.02);
+    }
+
+    /* Section container */
+    .section-container {
+        border-left: 2px solid #F56E0F;
+        padding-left: 15px;
+        margin-bottom: 25px;
+    }
+
+    /* Remove button */
+    .remove-section {
+        background: transparent;
+        border: 1px solid #ff4d4d;
+        color: #ff4d4d;
+        font-size: 12px;
+        padding: 4px 8px;
+        margin-top: 5px;
+        width: auto;
+        border-radius: 4px;
+    }
+
+    .remove-section:hover {
+        background: rgba(255, 77, 77, 0.1);
+    }
+
+    /* Section header */
+    .section-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+
+    .section-header h4 {
+        color: #FBFBFB;
+        font-size: 16px;
+    }
+
+    /* Fade-in animation */
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    /* Add fadeIn for new sections */
+    .fadeIn {
+        animation: fadeIn 0.5s ease;
+    }
